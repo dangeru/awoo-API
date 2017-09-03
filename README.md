@@ -59,6 +59,8 @@ To login, send a POST request to `/mod` with the `username` and `password` keys 
 On success, a `Set-Cookie` header will be returned. Simply forward that cookie along with further requests and they will be authenticated. The 
 [`API.Authorizer`](https://github.com/nilesr/United4/blob/master/app/src/main/java/us/dangeru/la_u_ncher413/API/Authorizer.java) class in the [la/u/ncher](https://github.com/nilesr/United4) android app shows an example implementation that can be used to login once and allow other requests to be automatically authenticated
 
+If useful, you can also specify the `redirect` key to be redirected to the url in the value on success. The in the [la/u/ncher](https://github.com/nilesr/United4) android app uses this in [`UnitedWebFragment`](https://github.com/nilesr/United4/blob/master/app/src/main/java/us/dangeru/la_u_ncher413/fragments/UnitedWebFragment.java)
+
 ## Posting
 
 To make a new OP, send the `board`, `title` and `comment` parameters in a POST request to `/post`.  
