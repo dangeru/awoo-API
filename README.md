@@ -50,14 +50,14 @@ Otherwise, these keys will be present
 
 If `sticky` is set to true, the `stickyness` key will also be in the result set, an integer where a higher value represents a higher priority in the board list.
 
-For a reference decoder and some example usage, see `API.Thread` and `API.WatchableThread` in the [la/u/ncher](https://github.com/nilesr/United4) android app
+For a reference decoder and some example usage, see [`API.Thread`](https://github.com/nilesr/United4/blob/master/app/src/main/java/us/dangeru/la_u_ncher413/API/Thread.java) and [`API.WatchableThread`](https://github.com/nilesr/United4/blob/master/app/src/main/java/us/dangeru/la_u_ncher413/API/WatchableThread.java) in the [la/u/ncher](https://github.com/nilesr/United4) android app
 
 ## Authentication
 
 To login, send a POST request to `/mod` with the `username` and `password` keys set. If successful, the response code will be a 303. If the username or password are incorrect, the response code will be a 403. 
 
 On success, a `Set-Cookie` header will be returned. Simply forward that cookie along with further requests and they will be authenticated. The 
-`API.Authorizer` class in the [la/u/ncher](https://github.com/nilesr/United4) android app shows an example implementation that can be used to login once and allow other requests to be automatically authenticated
+[`API.Authorizer`](https://github.com/nilesr/United4/blob/master/app/src/main/java/us/dangeru/la_u_ncher413/API/Authorizer.java) class in the [la/u/ncher](https://github.com/nilesr/United4) android app shows an example implementation that can be used to login once and allow other requests to be automatically authenticated
 
 ## Posting
 
