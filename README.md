@@ -11,7 +11,7 @@ If you are authenticated, the list of boards will include hidden boards like /st
 
 To get the information about a board, poll `/api/v2/board/:board/detail` which will return a JSON output with the name, description and rules of that board.
 
-If you are authenticated, the API will also return details of hidden board, for example /staff/
+If you are authenticated, the API will also return details of hidden boards, for example /staff/
 
 ### Indexes
 
