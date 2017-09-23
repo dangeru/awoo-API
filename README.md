@@ -7,6 +7,12 @@ To get a list of boards, poll `/api/v2/boards`, which will return a JSON encoded
 
 If you are authenticated, the list of boards will include hidden boards like /staff/
 
+### Board information
+
+To get the information about a board, poll `/api/v2/board/:board/detail` which will return a JSON output with the name, description and rules of that board.
+
+If you are authenticated, the list of boards will include hidden boards like /staff/
+
 ### Indexes
 
 To get the threads on a board, poll `/api/v2/board/:board`. This will return an array of the 20 most recently bumped threads as metadata hashes, which are documented below
