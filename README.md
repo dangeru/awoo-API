@@ -74,3 +74,13 @@ If the request is authenticated and the `capcode` parameter is also specified, t
 
 To make a new reply, send the `board`, `parent` and `content` parameters in a POST request to `/reply`.  
 If the request is authenticated and the `capcode` parameter is also specified, the post will be made with the capcode of the authenticated janitor.
+
+## Searching
+
+The routes for searching are `/api/v2/search` and `/api/v2/advanced_search`. The first one searches only titles, the second one searches titles and contents. Archived threads cannot have their contents searched, but will still appear in both listings if their title matches.
+The required `POST` parameters include:
+
+- `board_select` Board to search. Must be set to all to search all boards
+- `search_text` Needle
+
+Hashes for threads in search results may not contain all keys. This is not exclusive to archived threads.
